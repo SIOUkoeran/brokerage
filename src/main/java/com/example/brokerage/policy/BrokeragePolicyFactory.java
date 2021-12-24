@@ -5,7 +5,7 @@ import com.example.brokerage.entity.ActionType;
 
 public class BrokeragePolicyFactory {
 
-    public BrokeragePolicy of(ActionType actionType){
+    public static BrokeragePolicy of(ActionType actionType){
         switch (actionType){
             case RENT:
                 return new RentBrokeragePolicy();
