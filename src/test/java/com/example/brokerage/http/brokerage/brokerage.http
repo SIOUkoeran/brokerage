@@ -1,0 +1,2 @@
+#### 중개수수료
+GET localhost:8080/api/calc/brokerage?actionType=PURCHASE&price=100000000
