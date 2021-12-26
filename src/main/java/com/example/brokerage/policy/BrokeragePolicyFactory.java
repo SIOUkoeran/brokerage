@@ -1,6 +1,8 @@
 package com.example.brokerage.policy;
 
 import com.example.brokerage.entity.ActionType;
+import com.example.brokerage.exception.ErrorCode;
+import com.example.brokerage.exception.HouseUtilsException;
 
 
 public class BrokeragePolicyFactory {
@@ -12,7 +14,7 @@ public class BrokeragePolicyFactory {
             case PURCHASE:
                 return new PurchaseBrokeragePolicy();
             default:
-                throw new IllegalArgumentException("지원하지 않는 유형입니다.");
+                throw new HouseUtilsException(ErrorCode.INVALID_REQUEST, "잘못된 정책 요청입니다.");
         }
     }
 }
